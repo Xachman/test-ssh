@@ -1,0 +1,8 @@
+services:
+    php-ssh:
+        build: ./php-ssh
+        volumes: 
+            - ./php-ssh:/app
+    ubuntu:
+        build: ./ubuntu
+
