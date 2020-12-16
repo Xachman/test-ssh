@@ -10,5 +10,8 @@ $rsa = new RSA();
 $rsa->loadKey(file_get_contents('/root/.ssh/id_rsa'));
 var_dump($ssh->login('root', $rsa));
 
+$ssh->setTimeout(0);
+$ssh->setKeepAlive(5);
+
 
 echo $ssh->exec('sleep 300; ls -al');
